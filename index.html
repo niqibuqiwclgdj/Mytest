@@ -1,11 +1,6 @@
 <html>
 	<head>
 		<title>This is a page</title>
-		<style>
-			num{
-				width = 50px;		
-			}	
-		</style>
 	</head>
 	<body>
 		<input id = "num1" class = "num"/>
@@ -13,10 +8,25 @@
 		<input id = "num2" class = "num" / >
 		<input type = "button" onclick = "jisuan()" value = "="/>
 		<input id = "num3" class = "num"/>
+		<br/><br/>
+		
+		<img src = "pic_offf" id = "deng"/>
+		<input type = "button" value = "开灯" onclick = "Open()">
 		
 		<script>
 			function jisuan(){
 				num3.value = parseInt(num1.value) + parseInt(num2.value);
+			}
+			
+			var i = 1;
+			function open(){
+				if (i==1)
+					deng.src = "pic_on.if"
+					i = 0
+			}else{
+				deng.src = "pic_off.gif"
+				i = 1
+			}
 			}
 		</script>		
 	</body>
