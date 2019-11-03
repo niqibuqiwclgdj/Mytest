@@ -4,5 +4,15 @@
     </head>
     <body>
         <a href = "www.bilibili.com">This is bilibili</a>
+        <input id = "num1"/>
+        +
+        <input id = "num2"/>
+        <input type = "button" onclick = "jisuan()" value  ="=">
+        <input id = "num3"/>
+        <script>
+            function jisuan(){
+                num3.value = parseInt(num1.value) + parseInt(num2.value); 
+            }
+        </script>
     </body>
 </html>
