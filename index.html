@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>This is a page</title>
+		<style>
+			num{
+				width = 50px;		
+			}	
+		</style>
+	</head>
+	<body>
+		<input id = "num1" class = "num"/>
+		+
+		<input id = "num2" class = "num" / >
+		<input type = "button" onclick = "jisuan()" value = "="/>
+		<input id = "num3" class = "num"/>
+		
+		<script>
+			function jisuan(){
+				num3.value = parseInt(num1.value) + parseInt(num2.value);
+			}
+		</script>		
+	</body>
+</html>
