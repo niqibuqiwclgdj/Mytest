@@ -14,17 +14,14 @@
 		<input type = "button" value = "开灯" onclick = "Open()"/>
 		
 		<script>
-			function jisuan(){
-				num3.value = parseInt(num1.value) + parseInt(num2.value);
-			}
-			
 			function Open(){
-				if (deng.value == "开灯")
-					deng.src = "pic_on.gif"
-					value = "关灯"
-			}else{
-				deng.src = "pic_off.gif"
-				value = "开灯";
+				if(input.value =="开灯" ){
+					deng.src = "pic_on.gif"/>;
+					input.value = "关灯";
+				}else{
+					deng.src = "pic_off.gif"/>;
+					input.value = "开灯";
+				}
 			}
 		</script>		
 	</body>
