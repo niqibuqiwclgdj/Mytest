@@ -11,16 +11,16 @@
 		<br/><br/>
 		
 		<img src = "pic_off.gif" id = "deng"/>
-		<input type = "button" value = "开灯" onclick = "light()"/>
+		<input id = "pic" type = "button" value = "开灯" onclick = "light()">
 		
 		<script>
 			function light(){
-				if(input.value =="开灯" ){
-					deng.src = <"pic_on.gif"/>;
-					input.value = "关灯";
+				if(pic.value =="开灯" ){
+					deng.src = "pic_on.gif";
+					pic.value = "关灯";
 				}else{
-					deng.src = <"pic_off.gif"/>;
-					input.value = "开灯";
+					deng.src = "pic_off.gif";
+					pic.value = "开灯";
 				}
 			}
 		</script>		
