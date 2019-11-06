@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>敲键盘小能手</title>
+    </head>
+    <body>
+    
+    <script>
+        document.onkeydown = function(e){
+            var num = e.keyCode
+            var music = new Audio()
+            music.src = "c (" + (num-64)  + ").wav"
+            music.play()
+        }
+        </script>
+    </body>
+</html>
