@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>A ttitle</title>
+        
+        <style>
+            body{
+                background-color:black;
+            }
+        </style>
+    </head>
+    <body>
+        <img src = "right.png" id = "tank" style = "position:absolute; left:20px; top:20px;"/>
+        
+        <script>
+            document.onkeydown = function(e){
+                if(e.key == "w"){
+                    tank.src = "up.png";
+                    tank.style.top = parseInt(tank.style.top) - 5;
+                }else if(e.key == "s"){
+                    tank.src = "down.png";
+                    tank.style.top = parseInt(tank.style.top) + 5;
+                }else if(e.key == "a"){
+                    tank.src = "left.png";
+                    tank.style.left = parseInt(tank.style.left) -5;
+                }else if(e.key == "d"){
+                    tank.src = "right.png";
+                    tank.style.left = parseInt(tank.style.left) + 5;
+                }
+            }
+        </script>
+    </body>
+</html>
