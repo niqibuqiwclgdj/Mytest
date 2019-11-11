@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>显示日期</title>
+    </head>
+    <body>
+        <h1>这是一个最大的标题</h1>
+        <p id = "small">这是一个段落内容,<strong id = "big">这里是加深的段落内容</strong></p>
+        <p id = "thing"></p>
+        <hr/>
+        
+        <input id = "oneClick" type = "button" value = "点击" onclick = "play()"/>
+        <input style = "margin-left:200px;font-size:20px; color:yellow;background-color:black;border:1px solid red;" id = "twoClick" type = "button" value = "显示日期" onclick = "onTime()">
+        <hr/>
+        
+        <input style = "font-size:20px; color:red;" type = "button" onclick = "reloadPage()" value = "重新加载页面">
+        
+        <script>
+            var i = 1;
+            function play(){
+                if(i == 1){
+                small.innerHTML = "<p><strong>这是一个段落内容</strong>,这里是加深的段落内容</p>"
+                oneClick.value = "恢复";
+                i = 0;
+                }else if(i == 0){
+                    small.innerHTML = "<p>这是一个段落内容,<strong>这里是加深的段落内容</strong></p>";
+                    oneClick.value = "点击"
+                    i = 1;
+                }
+            }
+            
+            function onTime(){
+                if(i == 1){
+                thing.innerHTML = Date();
+                i = 0;
+                }else{
+                    thing.innerHTML = "再次点击可以显示时间"
+                    i = 1;
+                }
+            }
+            
+            function reloadPage(){
+                location.reload();
+            }
+        </script>
+    </body>
+</html>
