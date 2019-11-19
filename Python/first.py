@@ -1,6 +1,8 @@
-def printme(str):
-    print(str);
-    return;
+name = "zhouan"
+age = 20
+hobbies = ["computerGames" , "playBalls" , "zky"]
+money = "millon"
 
-printme("woyaodiaoyongzidingyi")
-printme("wwwwwww")
+for hobb in hobbies:
+	print("Ny name is " + name + ",\n" + "I'm %d years old" %(age) + ",\n" + "and i love to play " + hobb)
+print("Ok , end it")

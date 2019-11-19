@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>Let's Have Fun!</title>
+		<style>
+			div{
+				border:1px solid red;
+			}
+			h1{
+				text-align:center;
+				margin-top:0px;
+				font-size:30px;
+			}
+			#bigOne{
+				width:900px;
+				height:300px;
+				margin:0;			
+			}
+			.one{
+				width:100px;
+				float:left;
+				height:100px;
+				background-color:pink;
+				margin:50px;
+			}			
+		</style>
+	<head>
+	<body>
+	<div>
+		<div id = "bigOne">
+			<h1>Let us Have Fun!</h1>
+			<div id = "one" class = "one"></div>
+			<div class = "one"></div>
+			<div class = "one"></div>
+			<div class = "one"></div>
+		</div>
+		<div id = "bigTwo">
+			<div class = "two"></div>
+			<div class = "two"></div>
+			<div class = "two"></div>
+			<div class = "two"></div>
+		</div>
+	</div>
+	<script src = "js/jQuery.min.js"></script>
+	<script>
+		$(function(){
+			$("#one").slideUp(1000).slideDown(1000).toggle(1000).toggle(1000);
+			$(".one").css({width:"30px"})
+		}	
+	)
+	</script>
+	</body>
+<html>
