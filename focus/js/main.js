@@ -32,7 +32,6 @@ var checklist = document.getElementById("checklist")
 
 //取出所有在checklist里的li和input属性
 var items = checklist.querySelectorAll("li")
-console.log(items)
 var inputs = checklist.querySelectorAll("input")
 
 //循环，为每个都添加各自的函数操作

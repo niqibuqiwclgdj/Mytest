@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>轮换图片</title>
+        <style>
+            img{
+                width:960;
+                height:540;
+                margin:30 0 0 100;
+            }
+        </style>
+    </head>
+    <body>
+        <img src = "1.jpg" id = "pic" onclick = "next()">
+    </body>
+    <script>
+        var i = 1
+        function next(){
+            if(i<9){
+            pic.src = ++i +  ".jpg";
+            }else{
+                pic.src = "1.jpg"
+                i = 1
+            }
+        }
+    </script>
+</html>

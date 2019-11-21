@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>JavaScript</title>
+        <style>
+            img{
+                width:600px;
+                background-color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <input id = "num1"/>
+        +
+        <input id = "num2"/>
+        <input type = "button" value = "=" onclick = "count()">
+        <input id = "num3"/>
+        <br/><br/> 
+        
+        <img src = "1.jpg" onclick = "change()" id = "pic" alt = "刺客信条">
+        <br/><br/><br/>
+        
+        <img src = "7.jpg" type = "button" onclick = "open" id = "Seven">
+        
+        <script>
+            var i = 1; //函数调用的数字
+            var 
+            //简单算数的函数
+            function count(){
+                num3.value = parseInt(num1.value) + parseInt(num2.value)
+            }
+            
+            //设置调换图片的函数
+            function change(){
+                if(i == 1){
+                    pic.src = "2.jpg"
+                    i = 0
+                }else{
+                    pic.src = "1.jpg"
+                    i = 1
+                }
+            }
+            
+            //定义一个数组，在控制台输出随机的字符串
+            var students = ["zhouan" , "xdd" , "women" , "ruiwen" , "wqra"]
+            console.log(students[Math.floor(Math.random()*students.length)])
+            
+            
+            
+        </script>
+    </body>
+</html>
