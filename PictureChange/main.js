@@ -10,5 +10,16 @@ do{
 }while(time < 10);
 name = [" ww" , 123 , "trle"]
 for (i = 0 ; i<name.length() ; i++){
-    console.log("www")
-}*/
+    console.log("www")*/
+
+var checklist = document.getElementById("checklist")
+
+var items = checklist.querySelectorAll("li")
+
+for(var i = 0 ; i < items.length ; i++){
+  items.addEventListener("click" , editItem);
+}
+
+function editItem(){
+  console.log(this)
+}

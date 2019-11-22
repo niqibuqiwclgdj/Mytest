@@ -1,0 +1,93 @@
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>jQuery</title>
+		<script src = "js/jQuery.min.js"></script>
+		<style>
+			.firstDiv{
+					background-color:pink;
+					text-align:center;
+					width:1200px;
+					height:200px;
+				}
+			.btn{
+					float:left;
+					width:100px;
+					height:30px;
+					background-color:gray;
+					color:white;
+					margin:40px 0px 0px 80px;
+					line-height:30px;
+					border-radius:50px; 
+				}
+			.secondDiv{
+					width:1200px;
+					height:400px;
+					background-color:gray;
+				}
+			.second{
+					width:200px;
+					height:100px;
+					float:left;
+					margin:150px 0px 0px 50px;
+				}
+			.panel{
+					width:200px;
+					height:50px;
+					background-color:black;
+					color:white;
+					text-align:center;
+					line-height:50px; 
+					<!--用于修改上下的位置-->
+				}
+			.content{
+					text-align:center;
+					line-height:150px;
+					width:200px;
+					height:150px;
+					color:black;
+					background-color:white;
+				}
+		</style>
+	</head>
+	<body style="font-size:20px;">
+		<div class = "firstDiv">
+			<h1>Let Have Fun!</h1>
+			<!--添加一个可以自己修改的属性，属性一定要与互动的元素id相同-->
+			<div id = "btn1" class = "btn" data-panel = "second_1">#btn1</div> 
+			<div id = "btn1" class = "btn" data-panel = "second_2">#btn2</div>
+			<div id = "btn1" class = "btn" data-panel = 'second_3'>#btn3</div>
+			<div id = "btn1" class = "btn" data-panel = "second_4">#btn4</div>
+		</div>
+		
+		<div class = "secondDiv">
+			<div id = "second_1" class = "second">
+				<div id = "panel1" class = "panel">#panel1</div>
+				<div class = "content">content</div>
+			</div>
+			
+			<div id = "second_2" class = "second">
+				<div id = "panel2" class = "panel">#panel2</div>
+				<div class = "content">content</div>
+			</div>
+			
+			<div id = "second_3" class = "second">
+				<div id = "panel3" class = "panel">#panel3</div>
+				<div class = "content">content</div>
+			</div>
+			
+			<div id = "second_4" class = "second">
+				<div id = "panel4" class = "panel">#panel4</div>
+				<div class = "content">content</div>
+			</div>
+		</div>
+		
+		<script>
+			$(".btn").on("click" , function(){
+					var content = "This is my say: "
+					var panelId = $(this).attr("data-panel");//用于获取自定义属性
+					$("#" + panelId + " .content").html(content)
+				})
+		</script>
+	</body>
+</html>
