@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>2019年11月26日</title>
+	</head>
+	<body>
+		<button onclick = "weight()">加粗</button>
+		<input type = "color" id = "c" onchange = "changeColor()"/>
+		<input type = "file" id = "f" onchange = "addPic()"/><br/><br/>
+		
+		<div contentEditable id = "d1" style = "width:700px; height:300px; border: 1px solid red; font-size:30px;overflow:auto" ></div>
+	
+	<script>
+		function addPic(){
+				var range = window.getSelection().getRangeAt(0);
+				var pic = document.createElement("img");
+				var fileReader = new FileReader();
+				fileReader.readAsDataURL(f.files[0]);
+				fileReader.onload = function(){
+						pic.src = this.result;
+						range.insertNode(pic);
+					}
+			}
+		function weight(){
+				var range = window.getSelection().getRangeAt(0);
+				var span = document.createElement("span");
+				span.style.fontWeight = 1000;
+				range.surroundContents(span);
+			}
+		function changeColor(){
+				var range = window.getSelection().getRangeAt(0);
+				var span = document.createElement("span");
+				span.style.color = c.value;
+				range.surroundContents(span);				
+			}
+	</script>
+	</body>
+</html>
