@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<title>这是点击事件的用法</title>
+		<style>
+			img{
+				max-width:80%;
+				max-height:80%;
+				display: block;
+				margin: auto;
+				}
+		</style>
+	</head>
+	
+	<body>
+		<!--onchange是改变事件, onclick是点击事件-->
+		<button onclick = "weight()">点击可以加深字体</button>
+		<input type = "color" id = "c" onchange = "changeColor()"> 
+		<input type = "file" id = "f" onchange = "addPic()">
+		<!--contentEditable表示可编辑-->
+		<div  contentEditable style = "border:1px solid red;font-Size:30px; width:1000px; height:600px;"></div>
+		
+		<script>
+			function weight(){
+					//鼠标划取操作，取的是首字符位置
+					var range = window.getSelection().getRangeAt(0);
+					//在文本div中创建一个属性为span的a节点
+					var a = document.createElement("span");
+					//设置a的样式为加深
+					a.style.fontWeight = 1000;
+					//range对象的内容移动到一个新的节点, 并将这个新节点放到指定区域.
+					range.surroundContents(a);
+				}
+			
+			function changeColor(){
+					var range = window.getSelection().getRangeAt(0);
+					var span = document.createElement("span");
+					span.style.color = c.value;
+					range.surroundContents(span);
+				}
+			
+			function addPic(){
+					var range = window.getSelection().getRangeAt(0);
+					var pic  = document.createElement("img");
+					var fileReader = new FileReader();
+					fileReader.readAsDataURL(f.files[0]);
+					fileReader.onload = function(){
+						pic.src = this.result;
+						range.insertNode(pic);
+					}
+				}
+			
+			
+		</script>
+	</body>
+</html>
